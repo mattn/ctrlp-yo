@@ -20,7 +20,7 @@ else
 endif
 
 function! ctrlp#yo#init()
-  return map(filter(split(system('yo --generators'), "\n"), 'v:val =~# "^  \\S"'), 'trim(v:val)')
+  return map(filter(split(system('yo --generators'), "\n"), 'v:val =~# "^  \\S\\+$"'), 'trim(v:val)')
 endfunction
 
 function! ctrlp#yo#accept(mode, str)
