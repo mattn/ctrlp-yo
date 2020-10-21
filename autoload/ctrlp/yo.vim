@@ -25,7 +25,7 @@ endfunction
 
 function! ctrlp#yo#accept(mode, str)
   call ctrlp#exit()
-  exe 'terminal' &shell &shellcmdflag 'yo' fnameescape(a:str)
+  exe 'botright' terminal' &shell &shellcmdflag 'yo' fnameescape(a:str)
 endfunction
 
 function! ctrlp#yo#exit()
